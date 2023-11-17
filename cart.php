@@ -37,7 +37,6 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 if (isset($_GET['addToCart'])) {
-    $temp = "adjawjhdbkaw";
 
     $servername = "localhost";
     $username = "root";
@@ -115,6 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Call the function to save order information to the database
     saveOrderToDatabase($name, $address, $phone, $note, $cartItems);
     header('Location: ' . $_SERVER['PHP_SELF']);
+
     exit;
 }
 
@@ -203,6 +203,7 @@ function getAllOrdersWithItems()
                 'name' => $row['cname'],
                 'address' => $row['address'],
                 'phone' => $row['phone'],
+                'note' => $row['note'],
                 'items' => array()
             );
         }
@@ -224,6 +225,35 @@ function getAllOrdersWithItems()
 // Get all orders with items
 $allOrders = getAllOrdersWithItems();
 
+if (isset($_GET['buynow'])) {
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "bake_shop";
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    $itemId = $_GET['buynow'];
+    // Check if the item is already in the cart
+    $key = array_search($itemId, array_column($_SESSION['cart'], 'id'));
+
+    if ($key !== false) {
+        // If the item is already in the cart, update the quantity
+        $_SESSION['cart'][$key]['quantity'] += 1;
+    } else {
+
+        $sql = "SELECT id, name, price, image FROM product WHERE id = $itemId";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        // If the item is not in the cart, add it with a quantity of 1
+        $_SESSION['cart'][] = array('id' => $itemId, 'quantity' => 1, 'name' => $row['name'], 'price' => $row['price']);
+    }
+    header('Location: /Cart.php');
+    exit();
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -374,6 +404,7 @@ $allOrders = getAllOrdersWithItems();
                 <th>Name</th>
                 <th>Address</th>
                 <th>Phone</th>
+                <th>Note</th>
             </tr>
             <?php foreach ($allOrders as $order): ?>
                 <tr class="collapsible" data-order-id="<?php echo $order['id']; ?>">
@@ -389,9 +420,12 @@ $allOrders = getAllOrdersWithItems();
                     <td>
                         <?php echo $order['phone']; ?>
                     </td>
+                    <td>
+                        <?php echo $order['note']; ?>
+                    </td>
                 </tr>
                 <tr class="hidden-row" data-order-id="<?php echo $order['id']; ?>">
-                    <td colspan="4">
+                    <td colspan="5">
                         <!-- Display order items in a nested table -->
                         <table border="1">
                             <tr>

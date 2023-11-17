@@ -70,6 +70,34 @@ if (isset($_GET['addToCart'])) {
    exit();
 }
 
+// if (isset($_GET['buynow'])) {
+
+//    $servername = "localhost";
+//    $username = "root";
+//    $password = "";
+//    $dbname = "bake_shop";
+//    // Create connection
+
+//    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
+//    $itemId = $_GET['buynow'];
+//    // Check if the item is already in the cart
+//    $key = array_search($itemId, array_column($_SESSION['cart'], 'id'));
+
+//    if ($key !== false) {
+//       // If the item is already in the cart, update the quantity
+//       $_SESSION['cart'][$key]['quantity'] += 1;
+//    } else {
+
+//       $sql = "SELECT id, name, price, image FROM product WHERE id = $itemId";
+//       $result = mysqli_query($conn, $sql);
+//       $row = mysqli_fetch_assoc($result);
+//       // If the item is not in the cart, add it with a quantity of 1
+//       $_SESSION['cart'][] = array('id' => $itemId, 'quantity' => 1, 'name' => $row['name'], 'price' => $row['price']);
+//    }
+
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -164,11 +192,20 @@ if (isset($_GET['addToCart'])) {
                   <h3>
                      <?= $product['name'] ?>
                   </h3>
-                  <div class="add-cart-link">
-                     <?php echo "<a href='#' class='add-to-cart' data-item-id='{$product['id']}'>Add to Cart</a>"; ?>
-                  </div>
                   <div class="price">
                      <?= "$" . $product['price'] ?>
+                  </div>
+                  <div class="product-btn">
+                     <div class="add-cart-link">
+                        <button>
+                           <?php echo "<a href='#' class='add-to-cart' data-item-id='{$product['id']}'>Add to Cart</a>"; ?>
+                        </button>
+                     </div>
+                     <div class="buy-now-link">
+                        <button>
+                           <?php echo "<a class='by-now' href='http://localhost/cart.php?buynow={$product['id']}' data-item-id='{$product['id']}'>Buy Now</a>"; ?>
+                        </button>
+                     </div>
                   </div>
                </div>
             <?php endforeach; ?>
@@ -363,6 +400,29 @@ if (isset($_GET['addToCart'])) {
          });
       });
    });
+   // $(document).ready(function () {
+   //    // Add to Cart click event
+   //    $('.buy-now').on('click', function (e) {
+   //       e.preventDefault();
+   //       // Get the item ID from the data attribute
+   //       var itemId = $(this).data('item-id');
+   //       console.log(itemId);
+   //       // AJAX request to add item to cart
+   //       $.ajax({
+   //          type: 'GET',
+   //          url: '?buynow=' + itemId,
+   //          success: function (response) {
+   //             // Display a confirmation message (you can customize this part)
+   //             alert('Buynow !');
+   //             window.location.href('http://localhost/cart.php');
+   //          },
+   //          error: function () {
+   //             // Handle errors if needed
+   //             alert('Error adding item to cart.');
+   //          }
+   //       });
+   //    });
+   // });
 </script>
 
 </html>

@@ -264,17 +264,48 @@ header .navbar ul li:hover>ul {
     color: #00727F;
 }
 
+.container .products-container .product .add-cart-link button {
+    margin-top: 5px;
+    padding: 5px 5px;
+    background-color: white;
+}
+
+.container .products-container .product .buy-now-link button {
+    margin-top: 5px;
+    padding: 5px 5px;
+    background-color: #444;
+}
+
 .container .products-container .product .add-cart-link .add-to-cart {
     font-size: 2.5rem;
     color: #444;
     text-decoration: none;
 }
 
-.container .products-container .product:hover .add-to-cart {
+.container .products-container .product .buy-now-link .by-now {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/* .container .products-container .product .add-cart-link .add-to-cart a {
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+} */
+
+/* .container .products-container .product:hover .add-to-cart {
     font-size: 2.5rem;
     color: #008781;
     text-decoration: none;
-}
+} */
+
+
+
+/* .container .products-container .product:hover .buy-now {
+    font-size: 2.5rem;
+    color: #008781;
+    text-decoration: none;
+} */
 
 
 .about .row {
@@ -696,9 +727,26 @@ th {
     cursor: pointer;
 }
 
+.order .heading {
+    font-size: 6rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.table-order {
+    font-size: 3rem;
+}
+
 .order-form {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: 0 auto;
+    font-size: 20px;
+}
+
+.order-list {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 20px;
 }
 
 .form-group {
@@ -731,7 +779,7 @@ th {
 }
 
 .order-form {
-    width: 400px;
+    width: 50%;
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;
@@ -787,4 +835,9 @@ th {
 
 .show {
     display: table-row;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: space-around;
 }

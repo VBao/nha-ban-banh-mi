@@ -164,11 +164,20 @@ if (isset($_GET['addToCart'])) {
                <h3>
                   <?= $products[0]['name'] ?>
                </h3>
-               <div class="add-cart-link">
-                  <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[0]['id']}'>Add to Cart</a>"; ?>
-               </div>
                <div class="price">
                   <?= "$" . $products[0]['price'] ?>
+               </div>
+               <div class="product-btn">
+                  <div class="add-cart-link">
+                     <button>
+                        <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[0]['id']}'>Add to Cart</a>"; ?>
+                     </button>
+                  </div>
+                  <div class="buy-now-link">
+                     <button>
+                        <?php echo "<a class='by-now' href='http://localhost/cart.php?buynow={$products[0]['id']}' data-item-id='{$products[0]['id']}'>Buy Now</a>"; ?>
+                     </button>
+                  </div>
                </div>
             </div>
 
@@ -177,11 +186,20 @@ if (isset($_GET['addToCart'])) {
                <h3>
                   <?= $products[1]['name'] ?>
                </h3>
-               <div class="add-cart-link">
-                  <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[1]['id']}'>Add to Cart</a>"; ?>
-               </div>
                <div class="price">
                   <?= "$" . $products[1]['price'] ?>
+               </div>
+               <div class="product-btn">
+                  <div class="add-cart-link">
+                     <button>
+                        <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[1]['id']}'>Add to Cart</a>"; ?>
+                     </button>
+                  </div>
+                  <div class="buy-now-link">
+                     <button>
+                        <?php echo "<a class='by-now' href='http://localhost/cart.php?buynow={$products[1]['id']}' data-item-id='{$products[1]['id']}'>Buy Now</a>"; ?>
+                     </button>
+                  </div>
                </div>
             </div>
             <div class="product" data-name="p-3">
@@ -189,11 +207,20 @@ if (isset($_GET['addToCart'])) {
                <h3>
                   <?= $products[2]['name'] ?>
                </h3>
-               <div class="add-cart-link">
-                  <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[2]['id']}'>Add to Cart</a>"; ?>
-               </div>
                <div class="price">
                   <?= "$" . $products[2]['price'] ?>
+               </div>
+               <div class="product-btn">
+                  <div class="add-cart-link">
+                     <button>
+                        <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[2]['id']}'>Add to Cart</a>"; ?>
+                     </button>
+                  </div>
+                  <div class="buy-now-link">
+                     <button>
+                        <?php echo "<a class='by-now' href='http://localhost/cart.php?buynow={$products[2]['id']}' data-item-id='{$products[2]['id']}'>Buy Now</a>"; ?>
+                     </button>
+                  </div>
                </div>
             </div>
             <div class="product" data-name="p-4">
@@ -201,11 +228,20 @@ if (isset($_GET['addToCart'])) {
                <h3>
                   <?= $products[3]['name'] ?>
                </h3>
-               <div class="add-cart-link">
-                  <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[3]['id']}'>Add to Cart</a>"; ?>
-               </div>
                <div class="price">
                   <?= "$" . $products[3]['price'] ?>
+               </div>
+               <div class="product-btn">
+                  <div class="add-cart-link">
+                     <button>
+                        <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[3]['id']}'>Add to Cart</a>"; ?>
+                     </button>
+                  </div>
+                  <div class="buy-now-link">
+                     <button>
+                        <?php echo "<a class='by-now' href='http://localhost/cart.php?buynow={$products[3]['id']}' data-item-id='{$products[3]['id']}'>Buy Now</a>"; ?>
+                     </button>
+                  </div>
                </div>
             </div>
             <div class="product" data-name="p-5">
@@ -213,11 +249,20 @@ if (isset($_GET['addToCart'])) {
                <h3>
                   <?= $products[4]['name'] ?>
                </h3>
-               <div class="add-cart-link">
-                  <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[4]['id']}'>Add to Cart</a>"; ?>
-               </div>
                <div class="price">
                   <?= "$" . $products[4]['price'] ?>
+               </div>
+               <div class="product-btn">
+                  <div class="add-cart-link">
+                     <button>
+                        <?php echo "<a href='#' class='add-to-cart' data-item-id='{$products[4]['id']}'>Add to Cart</a>"; ?>
+                     </button>
+                  </div>
+                  <div class="buy-now-link">
+                     <button>
+                        <?php echo "<a class='by-now' href='http://localhost/cart.php?buynow={$products[4]['id']}' data-item-id='{$products[4]['id']}'>Buy Now</a>"; ?>
+                     </button>
+                  </div>
                </div>
             </div>
          </div>
