@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+html {
+    font-size: 50%;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    background: white no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+    /* Thay đổi kích thước theo mong muốn */
+    height: auto;
+    /* Để giữ tỷ lệ khung hình ban đầu */
+
+}
+
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: white;
+    display: none;
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li:hover>ul {
+    display: initial;
+}
+
+
+.Icon {
+    display: flex;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+
+}
+
+.Icon a {
+    margin-right: 20px;
+    /* Khoảng cách giữa các liên kết */
+}
+
+.Icon img {
+    width: auto;
+    /* Chiều rộng mong muốn của hình ảnh */
+    height: 25px;
+    /* Chiều cao mong muốn của hình ảnh */
+}
+
+
+
+.slider {
+    width: 100vw;
+    /* Thay đổi width thành 100vw để nó chiếm toàn bộ chiều rộng của màn hình */
+    height: 100vh;
+    /* Sử dụng 100vh để đảm bảo chiếm toàn bộ chiều cao của màn hình */
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list {
+    position: absolute;
+    width: 100%;
+    /* Đảm bảo nội dung con nằm full width */
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list img {
+    width: 2000px;
+    /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider .buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.slider .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.slider .dots li.active {
+    width: 30px;
+}
+
+
+
+/* Do an; */
+.container {
+    max-width: 100%;
+    /* Sử dụng 90% chiều rộng của màn hình */
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.doan .slider {
+    width: 100%;
+    height: 100vh;
+    /* Sử dụng 100% chiều cao của màn hình */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .title {
+    font-size: 3.5rem;
+    color: #444;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.container .products-container .product {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .products-container .product:hover {
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+
+.container .products-container .product img {
+    height: 25rem;
+    width: 30rem;
+    object-fit: cover;
+}
+
+.container .products-container .product:hover img {
+    transform: scale(.9);
+}
+
+.container .products-container .product h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .products-container .product:hover h3 {
+    color: #27ae60;
+}
+
+.container .products-container .product .price {
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .products-container .product:hover .price {
+    /* font-size: 3rem; */
+    color: #00727F;
+}
+
+.container .products-container .product .add-cart-link .add-to-cart {
+    font-size: 2.5rem;
+    color: #444;
+    text-decoration: none;
+}
+
+.container .products-container .product:hover .add-to-cart {
+    font-size: 2.5rem;
+    color: #008781;
+    text-decoration: none;
+}
+
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+.sub-heading {
+    text-align: center;
+    color: var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading {
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+
+.about .row .image {
+    flex: 1 1 45rem;
+}
+
+.about .row .image img {
+    width: 80%;
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    font-size: 15px;
+}
+
+.about .row .content h2 {
+    font-size: 30px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+
+.icon-image {
+    width: 24px;
+    /* Điều chỉnh kích thước ảnh */
+    margin-right: 10px;
+    /* Tạo khoảng cách giữa ảnh và văn bản */
+}
+
+.icon-shipping {
+    font-size: 24px;
+    /* Điều chỉnh kích thước biểu tượng */
+}
+
+span {
+    font-size: 18px;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Tạo khoảng cách giữa biểu tượng và văn bản */
+}
+
+.icons img {
+    width: 24px;
+    /* Điều chỉnh kích thước hình ảnh */
+    margin-right: 10px;
+    /* Tạo khoảng cách giữa hình ảnh và biểu tượng */
+}
+
+.icons i {
+    font-size: 24px;
+    /* Điều chỉnh kích thước biểu tượng */
+}
+
+.icons span {
+    font-size: 18px;
+    /* Điều chỉnh kích thước văn bản */
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: rgb(0, 0, 118);
+    /* Màu nền */
+    color: #fff;
+    /* Màu chữ */
+    padding: 10px 20px;
+    /* Kích thước padding */
+    border: none;
+    /* Loại bỏ viền */
+    border-radius: 5px;
+    /* Bo góc */
+    text-decoration: none;
+    /* Loại bỏ gạch chân */
+    font-size: 16px;
+    /* Kích thước chữ */
+    cursor: pointer;
+    /* Hình con trỏ khi di chuột qua */
+}
+
+/* Hover state (khi di chuột qua) */
+.btn:hover {
+    background-color: #0056b3;
+    /* Màu nền thay đổi khi di chuột qua */
+}
+
+.about {
+    background-color: white;
+    /* Màu nền của phần tử */
+    padding: 20px;
+    /* Khoảng cách xung quanh nội dung */
+    border: 1px solid #ccc;
+    /* Viền và màu viền */
+    border-radius: 5px;
+    /* Bo góc của phần tử */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Hiệu ứng bóng đổ */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.review {
+    background-color: white;
+    /* Thay đổi màu nền tại đây */
+    padding: 0px;
+    /* Khoảng cách xung quanh nội dung */
+    border: px solid #ccc;
+    /* Thêm khung viền với màu và độ dày tại đây */
+    border-radius: 5px;
+    /* Bo góc của phần tử */
+}
+
+#comment {
+    background-color: white;
+    /* Màu nền của phần tử */
+    padding: 20px;
+    /* Khoảng cách xung quanh nội dung */
+    margin: 0px auto;
+    margin-top: 14px;
+    margin-bottom: 50px;
+    width: 1012px;
+
+}
+
+#comment h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #626a67;
+}
+
+
+#comment-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+    list-style: none;
+    overflow: hidden;
+}
+
+
+
+#comment h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 50px;
+    color: #626a67;
+}
+
+#comment-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+    list-style: none;
+    overflow: hidden;
+}
+
+#list-comment {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    transition: 0.5s;
+}
+
+#list-comment .hinhanh {
+    width: 100%;
+    height: 100%;
+    background: #362f2f;
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+#list-comment .hinhanh .avatar {
+    text-align: center;
+    margin-top: 13px;
+    /* Điều chỉnh khoảng cách từ trên cùng */
+}
+
+#list-comment .hinhanh .avatar img {
+    width: auto;
+    /* Điều chỉnh kích thước ảnh theo nhu cầu của bạn */
+    height: 100px;
+    /* Điều chỉnh kích thước ảnh theo nhu cầu của bạn */
+    display: block;
+    /* Để làm cho ảnh nằm giữa */
+    margin: 0 auto;
+}
+
+#list-comment .hinhanh .stars {
+    display: flex;
+    margin: 0px auto;
+    width: 50%;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-comment .hinhanh .name {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+#list-comment .hinhanh .text {
+    padding: 20px 50px;
+    color: #fff;
+}
+
+
+.footer {
+    background-color: #040a18;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer .footer-left {
+    width: 30%;
+}
+
+.footer h3 {
+    color: #f5f5f5;
+    margin: 0;
+    padding-bottom: 20px;
+    font-family: Georgia, 'Time New Roman', Times, serif;
+}
+
+.footer .footer-left img {
+    width: 25%;
+    vertical-align: middle;
+}
+
+.footer .footer-left .credit-cards {
+    width: 100%;
+}
+
+.footer .footer-copyright {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 10%;
+}
+
+.footer .footer-center {
+    width: 35%;
+}
+
+.footer .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0px;
+}
+
+.footer .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer .footer-center p a {
+    color: rgb(22, 255, 177);
+    text-decoration: none;
+}
+
+.footer .footer-right {
+    width: 30%;
+}
+
+.footer .footer-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.footer .footer-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer .footer-media {
+    margin-top: 25px;
+}
+
+.footer .footer-media a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer .footer-media a:hover {
+    background-color: rgb(0, 122, 82);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.order-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.order-form {
+    width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.order-form form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.order-form form input,
+.order-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+.order-form form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.order-form form button:hover {
+    background-color: #3e8e41;
+}
+
+.hidden-row {
+    display: none;
+}
+
+.show {
+    display: table-row;
+}
