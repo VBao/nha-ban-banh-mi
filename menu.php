@@ -127,7 +127,7 @@ if (isset($_GET['addToCart'])) {
                      <li><a href="#">Khu vực phía nam</a></li>
                   </ul>
                </li>
-               <li><a href="#">Liên Hệ</a></li>
+               <li><a href="contact.html">Liên Hệ</a></li>
             </ul>
          </nav>
          <div class="Icon">
@@ -211,120 +211,6 @@ if (isset($_GET['addToCart'])) {
             <?php endforeach; ?>
          </div>
 
-   </section>
-   <!--Thông Tin về chúng tôi-->
-   <section class="about" id="about">
-      <h3 class="sub-heading">About Us</h3>
-      <h1 class="heading">why you choose us ? </h1>
-      <div class="row">
-         <div class="image">
-            <img src="img/banh1.webp" alt="">
-         </div>
-         <div class="content">
-            <h2>TOUS les JOURS</h2>
-            <br><br>
-            <p>Chúng tôi không chỉ đơn thuần là một tiệm bánh. Chúng tôi là một gia đình, là một cộng đồng yêu thích
-               bánh ngọt và nghệ thuật làm bánh. Được thành lập bởi một nhóm những người đam mê với việc làm bánh và
-               khao khát mang đến cho mọi người những trải nghiệm đặc biệt, chúng tôi đã biến ước mơ thành hiện thực.
-            </p>
-            <br><br>
-            <div class="icons-container">
-               <div class="icons">
-                  <img src="assets/truck-fast-solid.svg" alt="Free Shipping">
-                  <span>Free Delivery</span>
-               </div>
-               <div class="icons">
-                  <img src="assets/credit-card-solid.svg" alt="Easy Payment">
-                  <span>Easy Payment</span>
-               </div>
-            </div>
-            <br>
-            <a href="#" class="btn">Learn more </a>
-         </div>
-      </div>
-   </section>
-   <section class="review" id="review"><!--Review của khách hàng-->
-      <div id="comment">
-         <h2>NHẬN XÉT CỦA KHÁCH HÀNG</h2>
-         <div id="comment-body">
-            <div class="prev">
-               <a href="#">
-                  <img src="assets/prev.png" alt="Avatar">
-               </a>
-            </div>
-            <ul id="list-comment">
-               <li class="hinhanh">
-                  <div class="avatar">
-                     <img src="img/riziu.png" alt="Avatar">
-                  </div>
-                  <div class="stars">
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                  </div>
-                  <div class="name">Trần Ngọc Sơn</div>
-                  <div class="text">
-                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.
-                     </p>
-                  </div>
-               </li>
-
-               <li class="hinhanh">
-                  <div class="avatar">
-                     <img src="img/riziu.png" alt="Avatar">
-                  </div>
-                  <div class="stars">
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                     <span>
-                        <img src="assets/star.png" alt="Star">
-                     </span>
-                  </div>
-                  <div class="name">Trần Đắc Phú</div>
-                  <div class="text">
-                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type
-                        specimen book.
-                     </p>
-                  </div>
-               </li>
-
-            </ul>
-            <div class="next">
-               <a href="#">
-                  <img src="assets/next.png" alt="Next">
-               </a>
-            </div>
-         </div>
-      </div>
    </section>
    <!--Thông Tin về chúng tôi-->
    <div id="footer">
