@@ -276,7 +276,7 @@ if (isset($_GET['buynow'])) {
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="menu.php">Thực Đơn</a></li>
-                    <li><a href="#">Review</a></li>
+                    <li><a href="contact.html">Review</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Cửa Hàng</a>
                         <ul>

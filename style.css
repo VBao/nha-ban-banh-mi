@@ -236,7 +236,7 @@ header .navbar ul li:hover>ul {
 
 .container .products-container .product img {
     height: 25rem;
-    width: 30rem;
+    width: 25rem;
     object-fit: cover;
 }
 

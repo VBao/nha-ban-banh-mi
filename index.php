@@ -100,7 +100,7 @@ if (isset($_GET['addToCart'])) {
                      <li><a href="#">Khu vực phía nam</a></li>
                   </ul>
                </li>
-               <li><a href="#">Liên Hệ</a></li>
+               <li><a href="contact.html">Liên Hệ</a></li>
             </ul>
          </nav>
          <div class="Icon">
